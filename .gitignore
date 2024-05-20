@@ -40,3 +40,4 @@ out/
 .gitconfig
 
 tests/results
+/.idea/
