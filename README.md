@@ -68,9 +68,9 @@ kubectl apply -f k8/
 
 and go to [http://minikube.local:30080](http://minikube.local:30080)
 
-![..](./.github/blob/main/doc/img/screeenshots.gif)
+![..](doc/img/screeenshots.gif)
 
-![..](./.github/blob/main/doc/img/grafana-and-pgadmin.png)
+![..](doc/img/grafana-and-pgadmin.png)
 
 
 final cluster:
