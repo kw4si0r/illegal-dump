@@ -1,0 +1,43 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: illegal-dump-webapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: illegal-dump-webapp
+  template:
+    metadata:
+      labels:
+        app: illegal-dump-webapp
+    spec:
+      containers:
+      - name: webapp
+        image: kw4si0r/illegal-dump-webapp
+        ports:
+        - containerPort: 80
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 2
+          periodSeconds: 10
+            
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: illegal-dump-webapp
+spec:
+  selector:
+    app: illegal-dump-webapp
+  ports:
+    - port: 80
+      protocol: TCP
+      nodePort: 30080
+  type: LoadBalancer
+

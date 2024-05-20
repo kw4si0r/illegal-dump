@@ -1,0 +1,104 @@
+[
+  {
+    "httpRequest": {
+      "path": "/js"
+  },
+  "httpResponseTemplate": {
+      "template": "return { statusCode: 200, body: JSON.stringify({method: request.method, path: request.path, body: request.body, msg: 'hello from JAVASCRIPT'}) };",
+      "templateType": "JAVASCRIPT"
+  }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/api/coordinates"
+    },
+    "httpResponse": {
+      "body": {
+        "coordinates" : [
+          {
+            "lat": 50.23473232155869,
+            "lng": 19.025422356416804,
+            "label": "description mock 1"
+          },
+          {
+            "lat": 50.2356788213471,
+            "lng": 19.021270029616645,
+            "label": "description mock 2"
+          },
+          {
+            "lat": 50.19024155226475,
+            "lng": 19.048558352912785,
+            "label": "description mock 3"
+          }
+        ]
+      }
+    },
+    "times": {
+      "remainingTimes": 2,
+      "unlimited": false
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/api/coordinates"
+    },
+    "httpResponse": {
+      "body": {
+        "coordinates" : [
+          {
+            "lat": 50.23473232155869,
+            "lng": 19.025422356416804,
+            "label": "description mock 1"
+          },
+          {
+            "lat": 50.2356788213471,
+            "lng": 19.021270029616645,
+            "label": "description mock 2"
+          },
+          {
+            "lat": 50.19024155226475,
+            "lng": 19.048558352912785,
+            "label": "description mock 3"
+          },
+          {
+            "lat": 50.247343661587486,
+            "lng": 19.00203431579378,
+            "label": "description mock 4"
+          },
+          {
+            "lat": 50.24435202418336,
+            "lng": 18.99898728288568,
+            "label": "description mock 5"
+          },
+          {
+            "lat": 50.24015288299641,
+            "lng": 19.003643613153088,
+            "label": "description mock 6"
+          },
+          {
+            "lat": 50.24096188660864,
+            "lng": 19.014629561612153,
+            "label": "description mock 7"
+          },
+          {
+            "lat": 50.02443435302734,
+            "lng": 19.863005165988092,
+            "label": "description mock 8"
+          },
+          {
+            "lat": 50.24708766283212,
+            "lng": 20.2491509657075,
+            "label": "description mock 9"
+          },
+          {
+            "lat": 50.742666276939644,
+            "lng": 18.60745933066961,
+            "label": "description mock 10"
+          }
+        ]
+      }
+    }
+  }
+]

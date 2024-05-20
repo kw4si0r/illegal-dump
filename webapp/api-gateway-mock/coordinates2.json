@@ -1,0 +1,29 @@
+[
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/api/coordinates"
+    },
+    "httpResponse": {
+      "body": {
+          "coordinates" : [
+          {
+            "lat": 50.23373232155869,
+            "lng": 19.024422356416804,
+            "label": "mock 2"
+          },
+          {
+            "lat": 50.2346788213471,
+            "lng": 19.020270029616645,
+            "label": "mock 2"
+          },
+          {
+            "lat": 50.19124155226475,
+            "lng": 19.049558352912785,
+            "label": "mock 2"
+          }
+        ]
+      }
+    }
+  }
+]

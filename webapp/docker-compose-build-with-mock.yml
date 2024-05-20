@@ -1,0 +1,23 @@
+version: '3.2'
+
+services:
+  mock:
+    image: illegal-dump/api-gateway-mock
+    build: ./api-gateway-mock
+    container_name: illegal-dump-api-gateway-mock
+    ports:
+      - 8081:1080
+    # environment:
+    #   - MOCKSERVER_INITIALIZATION_JSON_PATH=/config/coordinates2.json
+  webapp:
+    image: illegal-dump/webapp
+    build: ./webapp
+    container_name: illegal-dump-webapp
+    ports:
+      - 8080:80
+      - 30303:30303
+    environment:
+      - API_GATEWAY_URL=http://mock:1080
+    depends_on:
+      - mock
+
